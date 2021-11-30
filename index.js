@@ -38,7 +38,7 @@ async function run() {
     //POST Honeymoon API
     app.post("/contact", async (req, res) => {
       const newMessage = req.body;
-      const result = await honeyCollection.insertOne(newMessage);
+      const result = await offerCollection.insertOne(newMessage);
       console.log("got new user", req.body);
       console.log("Added user", result);
       res.json(result);
